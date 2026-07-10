@@ -606,6 +606,56 @@ StableForge/
 
 ---
 
+Future Enhancements
+-------------------
+
+This section outlines key areas for future development, focusing on improving the protocol's robustness, user experience, and ecosystem integration.
+
+### Core Protocol & Security
+
+The primary focus is on hardening the protocol for a potential mainnet deployment. Planned enhancements include:
+
+*   **Formal Verification:** Implementing formal verification for the core invariant (total collateral > total SFC supply) and the health factor calculation logic.
+    
+*   **Comprehensive Fuzzing:** Expanding the existing Foundry test suite with exhaustive fuzz and invariant tests to uncover edge cases, particularly around liquidation mechanics and oracle interactions under extreme market volatility.
+    
+*   **Independent Security Audit:** Engaging a professional auditing firm for a comprehensive security review as a prerequisite for any mainnet launch.
+    
+*   **Emergency Mechanisms:** Exploring and implementing a decentralized emergency pause mechanism (e.g., via a multi-sig or a time-locked governor) to protect user funds in the event of a critical bug, while striving to maintain the protocol's permissionless ethos.
+    
+
+### Collateral & Asset Expansion
+
+To increase the utility and decentralization of StableForge, we plan to support more asset types:
+
+*   **Yield-Bearing Collateral:** Integrating liquid staking tokens like **stETH** or **cbETH** as collateral. This would allow users to earn staking rewards on their deposited assets while minting SFC, improving capital efficiency.
+    
+*   **Additional Collateral Types:** Adding support for other high-liquidity assets with reliable Chainlink price feeds, such as **LINK**, **UNI**, or stablecoins like **USDC** (to enable different minting strategies).
+    
+*   **Cross-Chain Expansion:** Deploying the protocol to other EVM-compatible Layer 2 networks like **Arbitrum** and **Base** to reduce transaction costs and reach a wider user base.
+    
+
+### User Experience & Tooling
+
+A significant effort will be dedicated to making the protocol more accessible and user-friendly.
+
+*   **🔹 SFC Faucet Page:** A dedicated, easy-to-use faucet page will be added to the frontend application. This will allow users on the **Sepolia testnet** to obtain **free SFC** for testing purposes, eliminating the need to mint against collateral in a test environment. This will be instrumental for on-boarding new users and enabling them to experiment with burning, redeeming, and liquidity provision.
+    
+*   **Position History:** Enhancing the frontend dashboard to include a detailed transaction history for each user, showing all past deposits, mints, burns, redeems, and liquidations.
+    
+*   **At-Risk Position Notifications:** Implementing a feature within the frontend (e.g., email or on-chain alerts) to notify users when their health factor is approaching the liquidation threshold, giving them time to add more collateral or repay debt.
+    
+*   **Deeper Liquidity Integration:** Creating direct interfaces with decentralized exchanges (like Uniswap or Curve) to allow for one-click swaps between SFC and other stablecoins or collateral assets directly from the StableForge app.
+    
+
+### Governance & Economics
+
+While the initial design is governance-minimal, future iterations may introduce carefully considered parameters:
+
+*   **Stability Fee Parameter:** Introducing a minimal, governance-controlled stability fee (or "spread") that could be used to fund a protocol insurance reserve or a decentralized autonomous organization (DAO) for long-term maintenance.
+    
+*   **Decentralized Governance:** Should a governance layer be introduced, it will be designed to be as minimal and secure as possible, potentially using a time-locked multi-sig or a frictionless voting module, while prioritizing the protocol's core permissionless nature.
+
 ## Contributing
 
 Contributions are welcome! Please open an issue before submitting a pull request for significant changes.
