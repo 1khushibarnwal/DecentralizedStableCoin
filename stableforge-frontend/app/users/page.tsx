@@ -142,7 +142,7 @@ export default function UsersPage() {
     const load = async () => {
       setLoading(true);
       try {
-        const uniqueUsers = await fetchAllDepositors(publicClient);
+        const uniqueUsers = await fetchAllDepositors(ADDRESSES.SFCEngine);
 
         const results = await Promise.all(
           uniqueUsers.map(async (user) => {
