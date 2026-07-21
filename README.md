@@ -351,7 +351,7 @@ If any check fails, **the entire transaction reverts** — no action can be take
 
 ## Live Application
 
-**🌐 Frontend:** _(currently under development)_
+**🌐 Frontend:** https://stableforge-frontend.vercel.app/
 
 ### Pages
 
