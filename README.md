@@ -658,7 +658,7 @@ While the initial design is governance-minimal, future iterations may introduce 
 
 ## Contributing
 
-Contributions are welcome! Please open an issue before submitting a pull request for significant changes.
+Contributions are welcome!
 
 ```bash
 git clone https://github.com/1khushibarnwal/StableForge.git
